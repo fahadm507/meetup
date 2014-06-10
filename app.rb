@@ -30,8 +30,31 @@ def authenticate!
 end
 
 get '/' do
+  redirect '/meetups'
+end
+
+get '/meetups' do
+  @meetups = Meetup.all
   erb :index
 end
+
+get '/meetup/:id' do
+  @meetup = Meetup.find(params[:id])
+
+  erb :show
+end
+
+post '/meetups/create' do
+
+  redirect '/meetups'
+end
+
+get '/meetups/create' do
+
+
+  erb :create
+end
+
 
 get '/auth/github/callback' do
   auth = env['omniauth.auth']

@@ -1,5 +1,6 @@
 class Meetup < ActiveRecord::Base
-  belongs_to :meetup_creator
+  belongs_to :creator, foreign_key: :meetup_creator_id
+
   has_many :users, through: :meetup_members
 end
 

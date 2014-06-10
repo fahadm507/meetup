@@ -38,3 +38,18 @@ a:visited {
   padding: 1em;
   background-color: #3B9089;
 }
+
+#meetup_table th, td{
+  padding:5px 20px 5px 20px;
+  margin:5px;
+}
+
+
+
+
+
+
+
+
+
+

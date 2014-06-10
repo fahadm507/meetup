@@ -4,14 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meetups</title>
-  <link rel="stylesheet" href="stylesheets/normalize.css" />
-  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="/stylesheets/normalize.css" />
+  <link rel="stylesheet" href="/stylesheets/app.css" />
 </head>
 <body>
 
 <div class="top-bar">
   <div class="container">
     <a class="logo" href="/">Meetups in Space</a>
+
+      <a class="create_button" href="/meetups/create">Create a Meetup</a>
+      <a class="join_button" href="/meetups/join">Join a Meetup</a>
 
     <ul class="top-bar-section">
       <% if signed_in? %>
