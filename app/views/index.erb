@@ -7,7 +7,7 @@
     </tr>
       <% @meetups.each do |meetup| %>
     <tr>
-      <td><a href="<%="meetups/#{meetup.id}"%>"><%="#{meetup.name} " %></a></td>
+      <td><a href="<%="/meetups/#{meetup.id}"%>"><%="#{meetup.name} " %></a></td>
     </tr>
     <%end%>
   </table>

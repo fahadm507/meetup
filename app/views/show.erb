@@ -9,6 +9,13 @@
       <td><a href="/"><%="#{@meetup.name} " %></a></td>
       <td><a href=""><%="#{@meetup.description} " %></a></td>
       <td><a href=""><%="#{@meetup.location} " %></a></td>
+      <td>
+        <div id="form">
+          <form action="/meetups/#{@meetup.id}" method="post">
+            <input type="button" value="JOIN" name="join" id="join">
+          </form>
+        </div>
+      </td>
     </tr>
   </table>
 </div>

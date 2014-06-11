@@ -38,23 +38,26 @@ get '/meetups' do
   erb :index
 end
 
-get '/meetup/:id' do
+get '/meetups/:id' do
   @meetup = Meetup.find(params[:id])
 
   erb :show
 end
 
 post '/meetups/create' do
-
+  @new_meetup = Meetup.create(name: params[:name], description: params[:description],
+              location: params[:location], meetup_creator_id: current_user.id)
   redirect '/meetups'
 end
 
 get '/meetups/create' do
-
-
   erb :create
 end
 
+post '/meetups/:id' do
+    new_members =
+   redirect '/meetups'
+end
 
 get '/auth/github/callback' do
   auth = env['omniauth.auth']
